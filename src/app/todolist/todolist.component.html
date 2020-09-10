@@ -2,10 +2,28 @@
 height: 1000px; color: blanchedalmond;  font-style: oblique;">
 
 <h2 style="position: absolute; left: 150px;">TO DO LIST</h2>
-<input style="position: absolute; top: 8%; left: 7.65%;" placeholder="Type your list" type="text" (input)="todo=$event.target.value"> 
+<h2 style="position: absolute; right: 300px;">TOMORROW LIST</h2>
+<input style="position: absolute; top: 8%; left: 7.65%;" placeholder="Type your list" type="text" (input)="todo=$event.target.value" value={{todo}}> 
 <button style="position: absolute; top: 8%; left: 20%;" 
 (click)="appendList()">~></button>
+<div style="position: absolute;top: 12%; left: 6%; font-style: normal;">
+    <ul *ngFor="let item of list">
+        <li><button (click)="del(item)">Done</button>
+            <button (click)="mov(item)">Move</button>
+            <span style="position: relative; left: 50px;">{{item}}</span> 
+        </li>
+    </ul>
 
+</div>
+<div style="position: absolute;top: 12%; right: 30%; font-style: normal;">
+    <ul *ngFor="let item of m">
+        <li>
+            {{item}}
+        </li>
+        
+    </ul>
+
+</div>
 
 
 
