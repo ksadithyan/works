@@ -29,7 +29,7 @@ export class TodolistComponent implements OnInit {
        console.log(this.list)
        this.todo=""
     }
-  }
+   }
   del(item:string)
   {
     this.a=this.list.indexOf(item)
