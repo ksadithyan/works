@@ -21,10 +21,12 @@ export class TodolistComponent implements OnInit {
   {
     if(this.todo != undefined && this.todo !="")
     {
-       if(this.list.length==0)
-         {this.list[0]= this.todo}
-       else
-         {this.list[this.list.length]=this.todo}
+      //  if(this.list.length==0)
+      //    {this.list[0]= this.todo}
+      //  else
+      //    {this.list[this.list.length]=this.todo}
+      // instead of above code (just push)
+      this.list.push(this.todo)
          
        console.log(this.list)
        this.todo=""
